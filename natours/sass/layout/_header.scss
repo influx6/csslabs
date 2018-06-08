@@ -1,0 +1,51 @@
+.header {
+    position: relative;
+    height: 95vh;
+    z-index: 100;
+    background-image: linear-gradient(to right bottom, $light-green-08-opacity, $dark-green-08-opacity), url("../img/hero-small.jpg");
+    @media (min-resolution: 192dpi) and (min-width: 600px) {
+        background-image: linear-gradient(to right bottom, $light-green-08-opacity, $dark-green-08-opacity), url("../img/hero.jpg");
+    }
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,
+    100% 0,
+    100% 65%,
+    0 100%);
+    -webkit-clip-path: polygon(0 0,
+    100% 0,
+    100% 75vh,
+    0 100%);
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+    .header__logo-box {
+        position: absolute;
+        top: 4.0rem;
+        left: 4.0rem;
+        .header__logo {
+            height: 3.5rem;
+        }
+    }
+    .header__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .heading-primary {
+            color: #fff;
+            backface-visibility: hidden;
+            margin-bottom: 6.0rem;
+            .heading-primary--main {
+                display: block;
+                animation-timing-function: ease-out;
+            }
+            .heading-primary--sub {
+                display: block;
+                animation-timing-function: ease-out;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+body {
+    color: $gray;
+    padding: 2.0rem;
+    box-sizing: border-box;
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}

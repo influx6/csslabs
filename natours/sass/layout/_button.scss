@@ -1,0 +1,36 @@
+.btn {
+    font-size: 1.3rem;
+    border-radius: 10.0rem;
+}
+
+.btn::after {
+    content: "";
+    border-radius: 10.0rem;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 1.5rem 4rem;
+    border-radius: 10.0rem;
+}
+
+.btn--white {
+    background: $color-white;
+    color: #777;
+}
+
+.btn--white::after {
+    background: $color-white;
+}
+
+.btn--green {
+    background: $color-primary;
+    color: $color-white;
+}
+
+.btn--green::after {
+    background: $color-primary;
+}
